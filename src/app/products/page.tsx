@@ -4,6 +4,8 @@ import ProductList from "../components/ProductList";
 import { Suspense } from "react";
 import { Metadata } from "next";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Addkart Products",
 };
