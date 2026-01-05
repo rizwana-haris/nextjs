@@ -1,0 +1,49 @@
+.productCard {
+  width: 220px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0;
+  box-shadow: 0 1px 5px rgba(88, 88, 88, 0.1);
+  text-align: center;
+}
+
+.productCard .image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background-color: #f3f3f3;
+  border-radius: 8px 8px 0 0;
+  display: block;
+}
+
+.productCard h3 {
+  font-size: 16px;
+  color: #333;
+  height: 50px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.price {
+  color: black;
+  font-size: 18px;
+}
+
+.category {
+  color: #0b80b6;
+}
+
+.rating {
+  color: goldenrod;
+  font-weight: 500;
+}
+
+.button {
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: gold;
+  border-style: none;
+  cursor: pointer;
+}
+

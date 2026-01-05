@@ -1,0 +1,17 @@
+.productlist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.productlink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.plheading{
+  text-align: center;
+  padding: 20px ;
+}

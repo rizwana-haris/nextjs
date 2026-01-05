@@ -1,0 +1,31 @@
+.productDetailPage {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  justify-content: center;
+}
+
+.productDetailPage .image {
+  width: 250px;
+  height: 300px;
+  object-fit: contain;
+}
+
+.info {
+  max-width: 400px;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  
+} 
+
+.button {
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: gold;
+  border-style: none;
+  cursor: pointer;
+}

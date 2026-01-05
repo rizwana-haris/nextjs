@@ -1,0 +1,15 @@
+.brandAdd {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.brandKart {
+  color: #ffd814;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-left: 3px;
+  height: 90px;
+}

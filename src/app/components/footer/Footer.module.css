@@ -1,0 +1,53 @@
+.footer {
+  height: 320px;
+  width: 100%;
+  margin: auto;
+  bottom: 0;
+  background-color: #212121;
+}
+
+.fpara {
+  height: 250px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding-top: 30px;
+  color: gray;
+}
+.fparainfo {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  font-weight: 600;
+  gap: 5px;
+  margin-top: 10px;
+  color: white;
+}
+.fparahead p {
+  font-size: 0.9rem;
+  color: white;
+}
+.fparainfo a {
+  color: white;
+  text-decoration: none;
+}
+.fbottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  gap: 100px;
+  border-top: 1px groove #454d5e;
+}
+.fbottompara {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  font-size: 0.7rem;
+  padding: 0px 30px;
+  cursor: pointer;
+}

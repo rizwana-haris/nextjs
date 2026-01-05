@@ -1,0 +1,39 @@
+.cartItem {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  justify-content: center;
+}
+
+.cartItem img {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+}
+
+.info {
+  max-width: 400px;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.quantity button {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(231, 231, 229);
+  color: black;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+}

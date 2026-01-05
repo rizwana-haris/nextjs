@@ -1,0 +1,41 @@
+
+.offersSection {
+  text-align: center;
+}
+
+.offerBox {
+  background: white;
+  padding: 10px;
+  height: 100%;
+  text-align: left;
+}
+
+.offerTitle {
+  padding: 10px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111;
+  font-size: 1.3rem;
+}
+
+.offerItems {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+} 
+
+.offerItem:global(img) {
+  width: 100%;
+  object-fit: cover;
+ 
+}
+
+.offerItem p {
+  font-size: 0.8rem;
+  color: #333;
+
+}
+
+.offerBox a {
+  text-decoration: none;  
+ }
