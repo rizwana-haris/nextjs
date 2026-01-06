@@ -2,56 +2,34 @@ import { Product } from "../type/Products";
 import { ServiceBase } from "./service-base";
 
 export class ProductService extends ServiceBase {
-
   
   static async getProducts(): Promise<Product[]> {
-    try {
-      const res = await fetch(this.getUrl('/products'), {
-        cache: "no-store", 
-      });
-
-      if (!res.ok) {
-        console.error(`[ProductService] Failed to fetch products: ${res.status} ${res.statusText}`);
-        return []; 
-      }
-
-      const data = await res.json();
-      if (!Array.isArray(data)) {
-        console.error(`[ProductService] Invalid products data`, data);
-        return [];
-      }
-
-      return data as Product[];
-
-    } catch (err) {
-      console.error(`[ProductService] Exception while fetching products:`, err);
-      return []; // fallback to empty array
-    }
-  }
-
+    const res = await fetch(this.getUrl('/products'), {
+    method: 'GET',
+    cache: 'no-store',
+    headers: {
+      'Accept': 'application/json',
+      'User-Agent': 'Next.js Server',
+    },
   
-  static async getProductById(id: number): Promise<Product | null> {
-    try {
-      const res = await fetch(this.getUrl(`/products/${id}`), {
-        cache: "no-store",
-      });
-
-      if (!res.ok) {
-        console.error(`[ProductService] Failed to fetch product ${id}: ${res.status} ${res.statusText}`);
-        return null;
-      }
-
-      const product = await res.json();
-      if (!product || typeof product !== "object") {
-        console.error(`[ProductService] Invalid product data for ID ${id}`, product);
-        return null;
-      }
-
-      return product as Product;
-
-    } catch (err) {
-      console.error(`[ProductService] Exception while fetching product ${id}:`, err);
-      return null;
-    }
+  });
+    if (!res.ok) throw new Error(`Failed to fetch products: ${res.status}`);
+    return res.json() as Promise<Product[]>;
   }
+
+  static async getProductById(id: number): Promise<Product> {
+    const res = await fetch(this.getUrl(`/products/${id}`), {
+    method: 'GET',
+    cache: 'no-store',
+    headers: {
+      'Accept': 'application/json',
+      'User-Agent': 'Next.js Server',
+    },
+  
+  });
+    if (!res.ok) throw new Error(`Failed to fetch product ${id}: ${res.status}`);
+    return res.json() as Promise<Product>;
+  }
+
+
 }
